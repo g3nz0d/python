@@ -1,0 +1,43 @@
+#this script is to help find a Jeep that I wish to purchase with specific attributes for cars.com
+
+
+import os
+import requests
+import json
+from colorama import init, Fore, Style
+
+init()
+
+MAKE = "Jeep"
+MODEL = "Wrangler Unlimited"
+YEAR = "2012"
+LOCATION = "San Diego, CA"
+MAX_MILES = 80000
+API_URL = "https://api.cars.com/search"
+
+# Check if jq is installed
+def is_jq_installed():
+    return os.system("command -v jq > /dev/null 2>&1") == 0
+
+if not is_jq_installed():
+    print(Fore.RED + "jq could not be found, please install it to process JSON data." + Style.RESET_ALL)
+    exit(1)
+
+# Fetch data from the API
+response = requests.get(f"{API_URL}?make={MAKE}&model={MODEL}&year={YEAR}&location={LOCATION}&max_miles={MAX_MILES}")
+
+if response.status_code != 200:
+    print(Fore.RED + "Failed to fetch data from the API." + Style.RESET_ALL)
+    exit(1)
+
+# Parse and display the results
+data = response.json()
+print(Fore.GREEN + "Available 2012 Jeep Wrangler Unlimited in San Diego, CA with less than 80,000 miles:" + Style.RESET_ALL)
+for car in data.get('results', []):
+    title = car.get('title')
+    price = car.get('price')
+    miles = car.get('miles')
+    location = car.get('location')
+    link = car.get('url')
+    print(f"{Fore.BLACK}Title: {title}, Price: {price}, Miles: {miles}, Location: {location}, Link: {link}{Style.RESET_ALL}")
+
