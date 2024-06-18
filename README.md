@@ -1,2 +1,0 @@
-# python
-all things python
