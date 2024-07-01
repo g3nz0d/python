@@ -20,7 +20,7 @@ def is_jq_installed():
     return os.system("command -v jq > /dev/null 2>&1") == 0
 
 if not is_jq_installed():
-    print(Fore.RED + "jq could not be found, please install it to process JSON data." + Style.RESET_ALL)
+    print(Fore.RED + "jq could not be found, please install." + Style.RESET_ALL)
     exit(1)
 
 # Fetch data from the API
