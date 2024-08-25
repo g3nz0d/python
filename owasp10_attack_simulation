@@ -1,3 +1,8 @@
+# Run the script from your terminal. It will send 100 requests for each of the 10 attack types (1,000 requests in total).
+# Monitor via Apache logs (or the Signal Sciences dashboard, for this instance) to see how the attacks are detected.
+
+
+
 import requests
 from multiprocessing import Pool
 
