@@ -1,4 +1,4 @@
-# Run the script from your terminal. It will send 100 requests for each of the 10 attack types (1,000 requests in total).
+# Run the script from your terminal. It will send 47 requests for each of the 10 attack types.
 # Monitor via Apache logs (or the Signal Sciences dashboard, for this instance) to see how the attacks are detected.
 
 
@@ -57,10 +57,10 @@ def send_request(payload):
         print(f"Error: {e}")
 
 if __name__ == "__main__":
-    # Generate 100 requests for each payload type (1000 total requests)
+    # Generate 47 requests for each payload type
     requests_to_send = []
     for payload in payloads:
-        requests_to_send.extend([payload] * 100)
+        requests_to_send.extend([payload] * 47)
 
     # Use multiprocessing to send requests in parallel
     with Pool(50) as p:
