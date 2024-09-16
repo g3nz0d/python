@@ -1,0 +1,97 @@
+# run time tracker
+# it will track the distance ran and time down to the second
+# this is a pretty amazing tracker to allow you to get a solid idea of your progress over time
+# FULL DISCLOSURE:  I had to Google a lot of this to make it work, so take it with a grain of NaCL, but I have tested it and it does work for me. 
+
+import csv
+import datetime
+
+# File to store run data
+FILENAME = 'run_times.csv'
+
+# Function to add a new run entry
+def add_run_entry(date, distance, minutes, seconds):
+    with open(FILENAME, 'a', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow([date, distance, minutes, seconds])
+    print(f"Run for {date} recorded: {distance} miles in {minutes} minutes and {seconds} seconds.")
+
+# Function to view all run times
+def view_run_times():
+    try:
+        with open(FILENAME, 'r') as file:
+            reader = csv.reader(file)
+            print(f"{'Date':<12} {'Distance':<10} {'Minutes':<8} {'Seconds':<8}")
+            print('-' * 40)
+            for row in reader:
+                print(f"{row[0]:<12} {row[1]:<10} {row[2]:<8} {row[3]:<8}")
+    except FileNotFoundError:
+        print("No run records found. Start by adding a run.")
+
+# Function to get today's date
+def get_today_date():
+    return datetime.date.today().strftime('%Y-%m-%d')
+
+# Function to calculate average run time per mile
+def calculate_average_time():
+    try:
+        with open(FILENAME, 'r') as file:
+            reader = csv.reader(file)
+            total_minutes = 0
+            total_seconds = 0
+            total_distance = 0
+            run_count = 0
+            for row in reader:
+                distance = float(row[1])
+                minutes = int(row[2])
+                seconds = int(row[3])
+                
+                total_distance += distance
+                total_minutes += minutes
+                total_seconds += seconds
+                run_count += 1
+            
+            if run_count > 0:
+                # Convert total seconds to minutes and seconds
+                total_minutes += total_seconds // 60
+                total_seconds = total_seconds % 60
+                avg_minutes_per_mile = (total_minutes / total_distance)
+                avg_seconds_per_mile = (total_seconds / total_distance)
+                print(f"Average time per mile: {avg_minutes_per_mile:.2f} minutes and {avg_seconds_per_mile:.2f} seconds over {total_distance:.2f} miles.")
+            else:
+                print("No runs to calculate average.")
+    except FileNotFoundError:
+        print("No run records found.")
+
+# Function to retrieve the best (fastest) run time per mile
+def get_best_time_per_mile():
+    try:
+        with open(FILENAME, 'r') as file:
+            reader = csv.reader(file)
+            best_minutes_per_mile = None
+            best_seconds_per_mile = None
+            
+            for row in reader:
+                distance = float(row[1])
+                minutes = int(row[2])
+                seconds = int(row[3])
+                
+                time_per_mile = (minutes * 60 + seconds) / distance
+                
+                if best_minutes_per_mile is None or time_per_mile < best_minutes_per_mile * 60 + best_seconds_per_mile:
+                    best_minutes_per_mile = time_per_mile // 60
+                    best_seconds_per_mile = time_per_mile % 60
+            
+            if best_minutes_per_mile is not None:
+                return best_minutes_per_mile, best_seconds_per_mile
+            else:
+                return None
+    except FileNotFoundError:
+        return None
+
+# Function to compare the new time to the previous best time
+def compare_run_time(distance, minutes, seconds):
+    best_time = get_best_time_per_mile()
+    new_time_per_mile = (minutes * 60 + seconds) / distance
+    if best_time:
+        best_minutes_per_m
