@@ -1,0 +1,43 @@
+# Python Playground 🐍
+
+This repo is a collection of various Python scripts, utilities, and experiments. Each subfolder contains a self-contained mini-project or script — ideal for learning, rapid prototyping, or reuse.
+
+## 📁 Projects
+
+| Folder | Description |
+|--------|-------------|
+| `Judokan` | Early Python experiment focused on movement patterns and logic for a turn-based judo simulation |
+| `jeep_locator` | Script/tool to help locate 2018+ Jeep Rubicon models using scraped or API-driven data |
+| `owasp10_attack_simulation` | Simulates common OWASP Top 10 attack scenarios (like XSS, SQLi) for learning and testing |
+| `runtime_tracker` | Measures runtime of Python scripts or functions for profiling/debugging |
+
+## 🛠 How to Use
+
+Each folder is independent. To run any script:
+
+```bash
+cd <folder_name>
+python <script_name>.py
+
+
+# Make sure you’re using Python 3.7+ : python3 --version
+
+
+
+
+---
+
+## ✅ Optional: Add a `.gitignore`
+
+Create a `.gitignore` and paste:
+
+```gitignore
+# Python
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+dist/
+build/
+.env
+.venv/
