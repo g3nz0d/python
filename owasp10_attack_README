@@ -1,0 +1,39 @@
+# OWASP Top 10 Attack Simulation 🔥
+
+This tool simulates several OWASP Top 10 attack vectors to help understand common web vulnerabilities. It is designed for educational use and safe environments only.
+
+## 🚨 Simulated Attacks
+
+This script sends 47 requests across 10 OWASP Top 10 categories, including:
+
+- **SQL Injection**
+- **Broken Authentication**
+- **Sensitive Data Exposure**
+- **XML External Entities (XXE)**
+- **Broken Access Control**
+- **Security Misconfiguration**
+- **Cross-Site Scripting (XSS)**
+- **Insecure Deserialization**
+- *(and more…)*
+
+## 🛠 How to Use
+```bash
+cd owasp10_attack_simulation
+python simulate.py
+
+
+# Make sure your Apache server is running locally at http://127.0.0.1/
+# Monitor detection using Apache logs or the Signal Sciences NGWAF dashboard
+
+
+⚠️ Warning
+This code is for educational and testing purposes only.
+Do not run against any production systems or without permission.
+
+
+
+
+
+# Step 5: Scroll down and commit the new file
+
+- Under **“Commit new file”**, enter this message:
