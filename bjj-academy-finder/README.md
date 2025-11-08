@@ -5,8 +5,6 @@
 
 # 🐍 Python Playground
 
-Professional Python tools and utilities by **Zodi Tagedini** (San Diego, CA). Each project is self-contained with comprehensive documentation.
-
 ## 🏆 Featured Project
 
 ### 🥋 [BJJ Academy Finder](./bjj-academy-finder/)
