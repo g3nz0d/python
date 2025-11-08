@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
 """
+__version__ = "1.0.0"
+__author__ = "g3nz0d"
+__license__ = "MIT"
+__repository__ = "https://github.com/g3nz0d/python"
+
+
+
 🥋 Brazilian Jiu Jitsu Academy Finder
 
 Tool for finding high-quality BJJ schools by ZIP code, Rating, and radius (miles).
