@@ -2,9 +2,24 @@
 
 ⭐ Star this repo if it helped you find a great BJJ school!
 
-**Professional Brazilian Jiu Jitsu school finder by ZIP code with precision rating control.**
 
-Perfect for travelers, martial artists, and anyone seeking high-quality BJJ training. Features Google Places API integration with intelligent fallback database.
+# 🐍 Python Playground
+
+Professional Python tools and utilities by **Zodi Tagedini** (San Diego, CA). Each project is self-contained with comprehensive documentation.
+
+## 🏆 Featured Project
+
+### 🥋 [BJJ Academy Finder](./bjj-academy-finder/)
+**Professional Brazilian Jiu Jitsu school finder by ZIP code**
+
+```bash
+cd bjj-academy-finder
+python jiu_jitsu_academy_finder.py --zip 92120 --min-rating 4.0
+with usage examples
+- requirements.txt and configuration templates
+- Professional code headers and documentation
+
+Perfect for travelers and martial artists seeking quality BJJ training!
 
 [![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
