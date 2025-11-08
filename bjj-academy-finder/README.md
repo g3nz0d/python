@@ -44,6 +44,7 @@ Perfect for travelers and martial artists seeking quality BJJ training!
 
 ### Installation
 ```bash
+
 # Clone and navigate to project
 git clone https://github.com/g3nz0d/python.git
 cd python/bjj-academy-finder
@@ -56,6 +57,7 @@ pip install -r requirements.txt
 
 ### Basic Usage
 ```bash
+
 # Find 4+ star schools in San Diego
 python jiu_jitsu_academy_finder.py --zip 92120 --min-rating 4.0
 
@@ -78,6 +80,7 @@ python jiu_jitsu_academy_finder.py --zip 78701 --min-rating 3.5 --max-rating 4.5
 python jiu_jitsu_academy_finder.py --zip 90210 --save results.jsonradius (meters) | `5000` (3.1 miles) |
 | `--limit` | Max results | `20` |
 | `--save` | Export to JSON | `results.json` |
+
 
 ## 🗺️ Coverage
 
