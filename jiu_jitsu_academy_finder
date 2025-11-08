@@ -1,6 +1,28 @@
 #!/usr/bin/env python3
 """
-Precision Jiu Jitsu Finder by Zip Code
+🥋 Brazilian Jiu Jitsu Academy Finder
+
+Tool for finding high-quality BJJ schools by ZIP code, Rating, and radius (miles).
+Perfect for travelers, martial artists, and anyone seeking quality training.
+
+Features:
+- Precise ZIP code targeting
+- Adjustable rating filters  
+- Google Places API integration
+- Distance calculations
+- Comprehensive school information
+
+Usage:
+    python jiu_jitsu_academy_finder --zip 92120 --min-rating 4.0 --api-key YOUR_KEY
+    python jiu_jitsu_academy_finder --zip 92101 --min-rating 3.5 --radius 2000
+
+Author: g3nz0d
+Repository: https://github.com/g3nz0d/python
+License: MIT
+"""
+
+
+
 
 Focused search with precise zip code targeting and adjustable rating filters.
 Perfect for honing in on exactly what you want.
