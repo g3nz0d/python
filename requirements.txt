@@ -1,5 +1,0 @@
-# BJJ Academy Finder Dependencies
-# Install with: pip install -r requirements.txt
-
-googlemaps>=4.10.0
-requests>=2.31.0
