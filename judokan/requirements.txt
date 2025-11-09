@@ -1,0 +1,9 @@
+# Judokan Dependencies
+# Install with: pip install -r requirements.txt
+
+# Add your specific dependencies here
+# Example common ones:
+requests>=2.31.0
+pandas>=1.5.0
+matplotlib>=3.6.0A_FILE=judokan_data.json
+BACKUP_ENABLED=true
