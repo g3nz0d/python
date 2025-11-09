@@ -1,8 +1,22 @@
 # Judokan Dependencies
 
 # Install with: pip install -r requirements.txt
+requests>=2.31.0
+openai>=1.0.0
 
+
+## 🎯 **What This Does**
+
+Your script is actually a **Judo Technique Image Generator** using AI - which is really cool! It:
+
+1. **Generates realistic images** of Judo techniques using OpenAI's DALL-E
+2. **Creates educational materials** for dojos and instructors
+3. **Shows proper form** with traditional gi and belt colors
+4. **Supports batch generation** or individual techniques
+
+**This is actually a unique and valuable tool for the Judo community!** 🥋🎨
 # Add your specific dependencies here
+
 
 # Example common ones:
 
