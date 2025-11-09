@@ -26,6 +26,19 @@ pip install -r requirements.txt
 python judokan.py
 ```
 
+
+## 📊 Available Techniques
+
+O-goshi (Major Hip Throw)
+Ippon Seoi Nage (One Arm Shoulder Throw)
+Osoto Gari (Large Outer Reap)
+Uchi Mata (Inner Thigh Throw)
+Koshi Guruma (Hip Wheel)
+Sasae Tsurikomi Ashi (Supporting Foot Lift-Pull Throw)
+Hiza Guruma (Knee Wheel)
+
+
+
 ## 🎯 Usage Examples
 
 ```bash
